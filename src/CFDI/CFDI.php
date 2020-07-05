@@ -2,8 +2,8 @@
 
 namespace xIDMONx\CFDI;
 
-use xIDMONx\Common\Node;
-use xIDMONx\Node\Comprobante;
+use xIDMONx\CFDI\Common\Node;
+use xIDMONx\CFDI\Node\Comprobante;
 
 use DOMDocument;
 use XSLTProcessor;
