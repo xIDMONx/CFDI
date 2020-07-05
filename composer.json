@@ -1,0 +1,38 @@
+{
+  "name":              "xidmonx/cfdi",
+  "description":       "Librería para generar Comprobantes Fiscales para la versión 3.3",
+  "type":              "library",
+  "minimum-stability": "dev",
+  "license":           "MIT",
+  "keywords":          [
+    "cfdi",
+    "sat",
+    "mexico"
+  ],
+  "authors":           [
+    {
+      "name":  "xIDMONx",
+      "email": "juancarlos_gb74@hotmail.com"
+    }
+  ],
+  "require":           {
+    "php":         "^7.1",
+    "ext-dom":     "*",
+    "ext-xsl":     "*",
+    "ext-openssl": "*"
+  },
+  "require-dev":       {
+    "phpunir/phpunit": "9.1.4"
+  },
+  "autoload":          {
+    "psr-4": {
+      "xIDMONx\\CFDI\\": "src/CFDI"
+    }
+  },
+  "autoload-dev":      {
+    "psr-4": {
+      "xIDMONx\\Tests\\CFDI\\": "tests/"
+    }
+  },
+  "prefer-stable":     true
+}
