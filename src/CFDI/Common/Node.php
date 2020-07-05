@@ -5,6 +5,7 @@ namespace xIDMONx\CFDI\Common;
 use DOMDocument;
 use DOMElement;
 use DOMNodeList;
+use LogicException;
 
 /**
  * Class Node
