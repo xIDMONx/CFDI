@@ -142,8 +142,15 @@ class CFDI
     protected function getCertificado()
     : string
     {
-        $cer = preg_replace('/(-+[^-]+-+)/', '', $this->cer);
-        $cer = preg_replace('/\s+/', '', $cer);
+        $filecer = $this->cer;
+        if (strpos($filecer, 'BEGIN PUBLIC KEY') == false) {
+            $cer = preg_replace('/(-+[^-]+-+)/', '', $filecer);
+            $cer = preg_replace('/\s+/', '', $cer);
+        } else {
+            $filecer = explode("-----END PUBLIC KEY-----", $filecer);
+            $cer     = preg_replace('/(-+[^-]+-+)/', '', $filecer[1]);
+            $cer     = preg_replace('/\s+/', '', $cer);
+        }
         return $cer;
     }
     
